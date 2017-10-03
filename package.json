@@ -1,10 +1,10 @@
 {
-  "name": "booking-flight-service",
+  "name": "semantic-service",
   "version": "0.0.1",
-  "description": "Microservice for booking flights",
+  "description": "Microservice for semantic experiments",
   "main": "service.js",
   "scripts": {
-    "dev": "DEBUG=booking-flight-service* nodemon service.js",
+    "dev": "DEBUG=semantic-service* nodemon service.js",
     "doc": "apidoc -e node_modules -o public/ service.js",
     "lint": "eslint .",
     "pretest": "npm run lint --silent",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.tripsee.com/tripseecom/booking-flight-service.git"
+    "url": "github.com:dpanchenko/semantic-service.git"
   },
   "author": "Dmitry Panchenko",
   "license": "ISC",
