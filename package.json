@@ -11,6 +11,10 @@
     "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha -R spec test/**/*.test.js",
     "start": "node service.js"
   },
+  "engines": {
+    "node": "8.4.x",
+    "npm": "5.3.x"
+  },
   "repository": {
     "type": "git",
     "url": "github.com:dpanchenko/semantic-service.git"
