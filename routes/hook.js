@@ -9,6 +9,7 @@ const processPullRequest = async (req, res, next) => {
   log('processPullRequest called with params', req.body, req.query);
   try {
     const result = await githubService.checkPullRequest(req.body);
+    log('result', result);
     sendResult(res, result);
   } catch (error) {
     next(error);
