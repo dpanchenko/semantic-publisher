@@ -6,12 +6,13 @@ const githubService = require('../core/services').github;
 const log = createDebug(`${config.app.name}:routes:hook:log`);
 
 const processPullRequest = async (req, res, next) => {
-  log('processPullRequest called with params', req.body, req.query);
+  log('processPullRequest called with params', githubService);
   try {
     const result = await githubService.checkPullRequest(req.body);
     log('result', result);
     sendResult(res, result);
   } catch (error) {
+    log('error', error);
     next(error);
   }
 };
