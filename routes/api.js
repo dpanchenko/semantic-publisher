@@ -19,6 +19,6 @@ const processTestRequest = async (req, res, next) => {
 
 module.exports = {
   use: (app) => {
-    app.all('/api/test', validate(validation.webhook), processTestRequest);
+    app.all('/api/test', validate(validation.test), processTestRequest);
   },
 };
