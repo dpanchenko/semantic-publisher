@@ -1,0 +1,50 @@
+{
+  "name": "booking-flight-service",
+  "version": "0.0.1",
+  "description": "Microservice for booking flights",
+  "main": "service.js",
+  "scripts": {
+    "dev": "DEBUG=booking-flight-service* nodemon service.js",
+    "doc": "apidoc -e node_modules -o public/ service.js",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha -R spec test/**/*.test.js",
+    "start": "node service.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.tripsee.com/tripseecom/booking-flight-service.git"
+  },
+  "author": "Dmitry Panchenko",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.1.0",
+    "pre-commit": "^1.2.2",
+    "proxyquire": "^1.8.0",
+    "sinon": "^3.2.0"
+  },
+  "precommit": [
+    "lint"
+  ],
+  "dependencies": {
+    "apidoc": "^0.17.6",
+    "body-parser": "^1.17.2",
+    "config": "^1.26.2",
+    "cors": "^2.8.4",
+    "debug": "^3.0.0",
+    "express": "^4.15.4",
+    "express-validation": "^1.0.2",
+    "joi": "^10.6.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4",
+    "uuid": "^3.1.0"
+  }
+}
