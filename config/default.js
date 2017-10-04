@@ -8,4 +8,7 @@ module.exports = {
   server: {
     port: parseInt(process.env.PORT, 10) || 8088,
   },
+  mqtt: {
+    url: process.env.MQTT_URL,
+  },
 };
