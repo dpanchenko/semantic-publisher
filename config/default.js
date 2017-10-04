@@ -10,5 +10,6 @@ module.exports = {
   },
   mqtt: {
     url: process.env.MQTT_URL,
+    channel: process.env.MQTT_CHANNEL,
   },
 };
