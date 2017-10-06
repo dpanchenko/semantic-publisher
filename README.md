@@ -4,6 +4,16 @@
 
 `Node >= 8.4`
 
+## Configuration
+
+``` bash
+export PORT=8080
+export DEBUG=semantic-service*
+export GIT_REPO_WATCH_BRANCH=master
+export MQTT_URL=tcp://localhost:1883
+export MQTT_CHANNEL=github:webhook:test
+```
+
 ## Start
 
  - Clone or download this repository
