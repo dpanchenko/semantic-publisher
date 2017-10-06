@@ -8,9 +8,8 @@ const processHookRequest = (req, res, next) => {
   log(`processHookRequest called from repo ${req.body.repository.full_name}`);
   if (req.app.mqtt) {
     const payload = JSON.stringify({
-      query: req.query,
-      params: req.params,
-      body: req.body,
+      watch: req.params.branch || config.git.branch,
+      data: req.body,
     });
     log(`publish to channel ${config.mqtt.channel}: ${payload}`);
     req.app.mqtt.publish(config.mqtt.channel, payload);
@@ -21,6 +20,6 @@ const processHookRequest = (req, res, next) => {
 
 module.exports = {
   use: (app) => {
-    app.all('/hook', processHookRequest);
+    app.all('/hook/:branch', processHookRequest);
   },
 };

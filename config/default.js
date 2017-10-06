@@ -12,4 +12,7 @@ module.exports = {
     url: process.env.MQTT_URL,
     channel: process.env.MQTT_CHANNEL,
   },
+  git: {
+    branch: process.env.GIT_REPO_WATCH_BRANCH,
+  },
 };

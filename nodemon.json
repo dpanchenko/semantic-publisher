@@ -1,4 +1,4 @@
 {
   "verbose": true,
-  "ignore": ["logs/*", "node_modules/*", "test/*", "public/*" ]
+  "ignore": ["node_modules/*"]
 }

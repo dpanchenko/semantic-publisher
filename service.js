@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const createDebug = require('debug');
 const mqtt = require('mqtt');
 
-const middlewares = require('./middlewares');
 const routes = require('./routes');
 const sendResult = require('./core/helpers/result');
 
@@ -24,7 +23,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/public`));
 
-middlewares(app);
 routes(app);
 
 app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars

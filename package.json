@@ -5,10 +5,7 @@
   "main": "service.js",
   "scripts": {
     "dev": "DEBUG=semantic-service* nodemon service.js",
-    "doc": "apidoc -e node_modules -o public/ service.js",
     "lint": "eslint .",
-    "pretest": "npm run lint --silent",
-    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha -R spec test/**/*.test.js",
     "start": "node service.js"
   },
   "engines": {

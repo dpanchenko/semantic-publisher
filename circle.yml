@@ -1,8 +1,0 @@
-machine:
-  node:
-    version: 8.4.0
-deployment:
-  stage:
-    branch: develop
-    commands:
-      - ssh server '~/redeploy.sh'
