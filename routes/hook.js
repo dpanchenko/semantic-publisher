@@ -5,7 +5,7 @@ const sendResult = require('../core/helpers/result');
 const log = createDebug(`${config.app.name}:routes:hook:log`);
 
 const processHookRequest = (req, res, next) => {
-  log('processHookRequest called with params', req.query, req.params, req.body);
+  log(`processHookRequest called from repo ${req.body.repository.full_name}`);
   if (req.app.mqtt) {
     const payload = JSON.stringify({
       query: req.query,
